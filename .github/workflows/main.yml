@@ -1,13 +1,13 @@
 name: 🔎 Check
 on:
   push:
-    branches: [develop, master]
+    branches: [develop, main]
   pull_request:
-    branches: [develop, master]
+    branches: [develop, main]
 jobs:
   lint:
     runs-on: ${{ matrix.os }}
-    continue-on-error: true
+    continue-on-error: false
     strategy:
       matrix:
         os: [ ubuntu-latest ]
@@ -26,5 +26,5 @@ jobs:
           key: npm-feature-${{ hashFiles('**/package-lock.json') }}
       - name: 🧩 Install dependencies
         run: npm install
-      - name: 🛠 Lint
-        run: npm run start
+      - name: 🛠 Run
+        run: npm start
