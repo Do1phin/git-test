@@ -7,7 +7,7 @@ on:
 jobs:
   lint:
     runs-on: ${{ matrix.os }}
-    continue-on-error: true
+    continue-on-error: false
     strategy:
       matrix:
         os: [ ubuntu-latest ]
