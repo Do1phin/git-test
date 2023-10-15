@@ -1,9 +1,9 @@
 name: 🔎 Check
 on:
   push:
-    branches: [develop, master]
+    branches: [develop, main]
   pull_request:
-    branches: [develop, master]
+    branches: [develop, main]
 jobs:
   lint:
     runs-on: ${{ matrix.os }}
