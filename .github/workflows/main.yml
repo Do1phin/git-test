@@ -29,4 +29,4 @@ jobs:
       - name: 🧩 Install dependencies
         run: npm install
       - name: 🛠 Run
-        run: npm build
+        run: npm run build
