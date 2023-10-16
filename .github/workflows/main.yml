@@ -4,6 +4,8 @@ on:
     branches: [develop, main]
   pull_request:
     branches: [develop, main]
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   lint:
     runs-on: ${{ matrix.os }}
@@ -27,4 +29,4 @@ jobs:
       - name: 🧩 Install dependencies
         run: npm install
       - name: 🛠 Run
-        run: npm start
+        run: npm build
